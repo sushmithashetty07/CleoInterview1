@@ -9,6 +9,7 @@ public class Main {
 
     public void itemizeList(String str, ArrayList<Object> items,ArrayList<Integer> count ){
         int curcount = 0;
+        int currseq = 0;
         for(Object item : items){
 
             if( item instanceof List){
@@ -25,7 +26,8 @@ public class Main {
                 }
                 countvar.append(count[count.size()-1]);
 
-                System.out.println(str + "." + countvar.toString() + ": " + item );
+                System.out.println(str + "." + countvar.toString()+"."+ currseq + ": " + item );
+                currseq = currseq + 1;
             }
 
         }
@@ -33,3 +35,4 @@ public class Main {
     }
 
 }
+
